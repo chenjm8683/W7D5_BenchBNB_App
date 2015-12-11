@@ -1,6 +1,6 @@
 var React = require('react');
 var BenchStore = require('../stores/benchStore.js');
-var ApiUtil = require('../util/apiUtil.js');
+// var ApiUtil = require('../util/apiUtil.js');
 
 var Index = React.createClass({
   getInitialState: function() {
@@ -21,7 +21,8 @@ var Index = React.createClass({
 
   componentDidMount: function() {
     this.indexToken = BenchStore.addListener(this._updateState);
-    ApiUtil.fetchBenches();
+    // make fetchBenches an idle event of google map
+    // ApiUtil.fetchBenches();
   },
 
   render: function() {
@@ -29,7 +30,7 @@ var Index = React.createClass({
 
     return (
       <div>
-        To be implemented: 
+        To be implemented:
       </div>
     );
   }
