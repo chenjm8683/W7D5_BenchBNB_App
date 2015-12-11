@@ -3,10 +3,11 @@ var ReactDOM = require('react-dom');
 var Router = require('react-router').Router;
 var Route = require('react-router').Route;
 var ApiUtil = require('./util/apiUtil.js');
+var Index = require('./components/index.jsx');
 
 // for testings
-window.benchStore = require('./stores/benchStore.js');
-window.ApiUtil = require('./util/apiUtil.js');
+// window.benchStore = require('./stores/benchStore.js');
+// window.ApiUtil = require('./util/apiUtil.js');
 
 
 // var routes = (
@@ -24,6 +25,6 @@ window.ApiUtil = require('./util/apiUtil.js');
 // for testing
 document.addEventListener("DOMContentLoaded", function() {
   ReactDOM.render(
-    <div>Test</div>,
+    <Index />,
     document.getElementById('content'));
 });
