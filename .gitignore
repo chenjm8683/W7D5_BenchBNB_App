@@ -13,7 +13,7 @@
 /tmp
 
 # node_module
-node_module
+node_modules
 
 # bundle
 bundle.js
