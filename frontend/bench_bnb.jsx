@@ -3,7 +3,8 @@ var ReactDOM = require('react-dom');
 var Router = require('react-router').Router;
 var Route = require('react-router').Route;
 var ApiUtil = require('./util/apiUtil.js');
-var Index = require('./components/index.jsx');
+var Search = require('./components/search.jsx');
+
 
 // for testings
 // window.benchStore = require('./stores/benchStore.js');
@@ -25,6 +26,6 @@ var Index = require('./components/index.jsx');
 // for testing
 document.addEventListener("DOMContentLoaded", function() {
   ReactDOM.render(
-    <Index />,
+    <Search />,
     document.getElementById('content'));
 });
