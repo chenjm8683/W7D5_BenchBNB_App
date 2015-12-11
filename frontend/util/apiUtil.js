@@ -1,9 +1,11 @@
 var ApiAction = require('../actions/apiAction.js');
 
 var ApiUtil = {
-  fetchBenches: function(){
+  fetchBenches: function(latLngBounds){
     //make an api call using AJAX in here
-    $.get('api/benches', {}, function(benches) {
+    // debugger;
+    $.get('api/benches', {bounds: latLngBounds}, function(benches) {
+      // debugger;
       ApiAction.receiveAll(benches);
     });
   }

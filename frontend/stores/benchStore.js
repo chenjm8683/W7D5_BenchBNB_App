@@ -6,24 +6,21 @@ var BenchConstants = require('../constants/benchConstants');
 
 var _benches = [];
 
+var resetBenches = function(benches) {
+  _benches = benches;
+};
+
 BenchStore.all = function () {
-  return _benches.slice(0);
+  return _benches.slice();
 };
 
 BenchStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case BenchConstants.BENCHES_RECEIVED:
-      var result = resetBenches(payload.benches);
+      resetBenches(payload.benches);
       BenchStore.__emitChange();
       break;
   }
 };
-
-
-var resetBenches = function(benches) {
-  _benches = benches;
-};
-
-
 
 module.exports = BenchStore;

@@ -27,10 +27,20 @@ var Index = React.createClass({
 
   render: function() {
     // console.log(this.state.benches);
+    var benchLis = this.state.benches.map(function(bench) {
+      return (
+        <li key={bench.id}>
+          <p>{"id: " + bench.id}</p>
+          <p>{"description: " + bench.description}</p>
+        </li>
+      )
+    });
 
     return (
       <div>
-        To be implemented:
+        <ul>
+          {benchLis}
+        </ul>
       </div>
     );
   }
